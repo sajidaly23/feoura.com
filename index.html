@@ -47,7 +47,7 @@
     </header>
 
     <!-- Hero Section -->
-    <main class="pt-20 min-h-screen relative overflow-hidden">
+    <main class="pt-20 min-h-screen relative overflow-hidden bg-blue-50">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
             <div class="max-w-4xl mx-auto text-center relative z-10">
                 <!-- Headline -->
@@ -71,7 +71,7 @@
         </div>
 
         <!-- Gradient Background - Right Side -->
-        <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-b from-blue-50 via-blue-100 to-purple-100 -z-10"></div>
+        <!-- <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-b from-blue-100 via-blue-100 to-purple-100 -z-10"></div> -->
     </main>
 
     <!-- Partners/Logos Section -->
@@ -94,7 +94,7 @@
 
     <!-- Video Section -->
     <section class="bg-black py-20 lg:py-32 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8">
             <div class="relative flex items-center justify-center">
                 <!-- Video Container -->
                 <div class="w-full max-w-6xl mx-auto">
@@ -345,12 +345,13 @@
         </div>
     </section>
 
+   
     <!-- Latest Digital Masterpieces Section -->
-    <section class="bg-gradient-to-b from-blue-50 to-white py-20 lg:py-32 relative overflow-hidden">
-        <div class="max-w-7xl mx-6 px-6 lg:px-8">
+    <section class="bg-gradient-to-b from-blue-50 to-white py-12 lg:py-16 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <!-- Header -->
-            <div class="text-center mb-12">
-                <h2 class="text-4xl lg:text-5xl font-smallblack uppercase mb-4">
+            <div class="text-center mb-8">
+                <h2 class="text-4xl lg:text-5xl font-bold text-black uppercase mb-4">
                     OUR LATEST DIGITAL MASTERPIECES
                 </h2>
                 <p class="text-lg lg:text-xl text-black">
@@ -358,235 +359,265 @@
                 </p>
             </div>
 
-            <!-- Slider Container -->
-            <div class="relative">
-                <!-- Navigation Arrows -->
-                <button id="prevSlide" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition-colors">
-                    <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            <!-- Slider -->
+            <div class="relative gap-4">
+                <!-- Prev Button -->
+                <button id="prevSlide"
+                    class="absolute -left-4 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-md hover:bg-gray-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 19l-7-7 7-7"></path>
                     </svg>
                 </button>
-                <button id="nextSlide" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition-colors">
-                    <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+
+                <!-- Next Button -->
+                <button id="nextSlide"
+                    class="absolute -right-4 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-md hover:bg-gray-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5l7 7-7 7"></path>
                     </svg>
                 </button>
 
                 <!-- Slider Wrapper -->
-                <div class="overflow-hidden">
-                    <div id="slider" class="flex transition-transform duration-1000 ease-in-out">
-                        <!-- Slide 1 - Medical Clinic -->
-                        <div class="min-w-[50%] lg:min-w-[20%] flex-shrink-0 px-3">
-                            <div class="bg-white rounded-smallow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                                <img 
-                                    src="https://feoura.com/wp-content/uploads/2025/11/Untitled-design-18.webp" 
-                                    alt="Digital Masterpiece" 
-                                    class="w-full h-[200px] lg:h-[240px] object-cover"
-                                >
+                <div class="overflow-hidden gap-4">
+                    <div id="slider"
+                        class="flex transition-transform duration-700 ease-in-out">
+
+                        <!-- Slide 1 -->
+                        <div class="min-w-[80%] sm:min-w-[45%] lg:min-w-[28%] px-3">
+                            <div
+                                class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-[1.02] transition">
+                                <img
+                                    src="https://feoura.com/wp-content/uploads/2025/11/Untitled-design-18.webp"
+                                    class="w-full h-[160px] lg:h-[180px] object-cover"
+                                    alt="Project">
                             </div>
                         </div>
-                        <!-- Slide 2 - Business Dashboard -->
-                        <div class="min-w-[50%] lg:min-w-[20%] flex-shrink-0 px-3">
-                            <div class="bg-white rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                                <img 
-                                    src="https://feoura.com/wp-content/uploads/2025/11/Untitled-design-18.webp" 
-                                    alt="Digital Masterpiece" 
-                                    class="w-full h-[200px] lg:h-[240px] object-cover"
-                                >
+
+                        <!-- Slide 2 -->
+                        <div class="min-w-[80%] sm:min-w-[45%] lg:min-w-[28%] px-3">
+                            <div
+                                class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-[1.02] transition">
+                                <img
+                                    src="https://feoura.com/wp-content/uploads/2025/11/Untitled-design-18.webp"
+                                    class="w-full h-[160px] lg:h-[180px] object-cover"
+                                    alt="Project">
                             </div>
                         </div>
-                        <!-- Slide 3 - Koncept Medical Clinic -->
-                        <div class="min-w-[50%] lg:min-w-[20%] flex-shrink-0 px-3">
-                            <div class="bg-white rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                                <img 
-                                    src="https://feoura.com/wp-content/uploads/2025/11/Untitled-design-18.webp" 
-                                    alt="Digital Masterpiece" 
-                                    class="w-full h-[200px] lg:h-[240px] object-cover"
-                                >
+
+                        <!-- Slide 3 -->
+                        <div class="min-w-[80%] sm:min-w-[45%] lg:min-w-[28%] px-3">
+                            <div
+                                class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-[1.02] transition">
+                                <img
+                                    src="https://feoura.com/wp-content/uploads/2025/11/Untitled-design-18.webp"
+                                    class="w-full h-[160px] lg:h-[180px] object-cover"
+                                    alt="Project">
                             </div>
                         </div>
-                        <!-- Slide 4 - Construction Website -->
-                        <div class="min-w-[50%] lg:min-w-[20%] flex-shrink-0 px-3">
-                            <div class="bg-white rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                                <img 
-                                    src="https://feoura.com/wp-content/uploads/2025/11/Untitled-design-18.webp" 
-                                    alt="Digital Masterpiece" 
-                                    class="w-full h-[200px] lg:h-[240px] object-cover"
-                                >
+
+                        <!-- Slide 4 -->
+                        <div class="min-w-[80%] sm:min-w-[45%] lg:min-w-[28%] px-3">
+                            <div
+                                class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-[1.02] transition">
+                                <img
+                                    src="https://feoura.com/wp-content/uploads/2025/11/Untitled-design-18.webp"
+                                    class="w-full h-[160px] lg:h-[180px] object-cover"
+                                    alt="Project">
                             </div>
                         </div>
-                        <!-- Slide 5 - Mining Website -->
-                        <div class="min-w-[50%] lg:min-w-[20%] flex-shrink-0 px-3">
-                            <div class="bg-white rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                                <img 
-                                    src="https://feoura.com/wp-content/uploads/2025/11/Untitled-design-18.webp" 
-                                    alt="Digital Masterpiece" 
-                                    class="w-full h-[200px] lg:h-[240px] object-cover"
-                                >
+
+                        <!-- Slide 5 -->
+                        <div class="min-w-[80%] sm:min-w-[45%] lg:min-w-[28%] px-3">
+                            <div
+                                class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-[1.02] transition">
+                                <img
+                                    src="https://feoura.com/wp-content/uploads/2025/11/Untitled-design-18.webp"
+                                    class="w-full h-[160px] lg:h-[180px] object-cover"
+                                    alt="Project">
                             </div>
                         </div>
-                        <!-- Slide 6 - Real Estate -->
-                        <div class="min-w-[50%] lg:min-w-[20%] flex-shrink-0 px-3">
-                            <div class="bg-white rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                                <img 
-                                    src="https://feoura.com/wp-content/uploads/2025/11/Untitled-design-18.webp" 
-                                    alt="Digital Masterpiece" 
-                                    class="w-full h-[200px] lg:h-[240px] object-cover"
-                                >
-                            </div>
-                        </div>
-                        <!-- Slide 7 - Corporate -->
-                        <div class="min-w-[50%] lg:min-w-[20%] flex-shrink-0 px-3">
-                            <div class="bg-white rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                                <img 
-                                    src="https://feoura.com/wp-content/uploads/2025/11/Untitled-design-18.webp" 
-                                    alt="Digital Masterpiece" 
-                                    class="w-full h-[200px] lg:h-[240px] object-cover"
-                                >
-                            </div>
-                        </div>
-                        <!-- Slide 8 - E-commerce -->
-                        <div class="min-w-[50%] lg:min-w-[20%] flex-shrink-0 px-3">
-                            <div class="bg-white rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                                <img 
-                                    src="https://feoura.com/wp-content/uploads/2025/11/Untitled-design-18.webp" 
-                                    alt="Digital Masterpiece" 
-                                    class="w-full h-[200px] lg:h-[240px] object-cover"
-                                >
-                            </div>
-                        </div><!-- Latest Digital Masterpieces Section -->
-<section class="bg-gradient-to-b from-blue-50 to-white py-20 lg:py-28 relative overflow-hidden">
-  <div class="max-w-7xl mx-auto px-6 lg:px-8">
-
-    <!-- Header -->
-    <div class="text-center mb-14">
-      <h2 class="text-4xl lg:text-5xl font-bold text-black uppercase mb-4">
-        OUR LATEST DIGITAL MASTERPIECES
-      </h2>
-      <p class="text-lg lg:text-xl text-black">
-        SEE HOW FEOURA DESIGNS DRIVE REAL-WORLD GROWTH AND CONVERSIONS
-      </p>
-    </div>
-
-    <!-- Slider -->
-    <div class="relative">
-
-      <!-- Prev Button -->
-      <button id="prevSlide"
-        class="absolute -left-4 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-md hover:bg-gray-100">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M15 19l-7-7 7-7"></path>
-        </svg>
-      </button>
-
-      <!-- Next Button -->
-      <button id="nextSlide"
-        class="absolute -right-4 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-md hover:bg-gray-100">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M9 5l7 7-7 7"></path>
-        </svg>
-      </button>
-
-      <!-- Slider Wrapper -->
-      <div class="overflow-hidden">
-        <div id="slider"
-          class="flex transition-transform duration-700 ease-in-out">
-
-          <!-- Slide 1 -->
-          <div class="min-w-[80%] sm:min-w-[45%] lg:min-w-[28%] px-3">
-            <div
-              class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-[1.02] transition">
-              <img
-                src="https://feoura.com/wp-content/uploads/2025/11/Untitled-design-18.webp"
-                class="w-full h-[200px] lg:h-[240px] object-cover"
-                alt="Project">
-            </div>
-          </div>
-
-          <!-- Slide 2 -->
-          <div class="min-w-[80%] sm:min-w-[45%] lg:min-w-[28%] px-3">
-            <div
-              class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-[1.02] transition">
-              <img
-                src="https://feoura.com/wp-content/uploads/2025/11/Untitled-design-18.webp"
-                class="w-full h-[200px] lg:h-[240px] object-cover"
-                alt="Project">
-            </div>
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="min-w-[80%] sm:min-w-[45%] lg:min-w-[28%] px-3">
-            <div
-              class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-[1.02] transition">
-              <img
-                src="https://feoura.com/wp-content/uploads/2025/11/Untitled-design-18.webp"
-                class="w-full h-[200px] lg:h-[240px] object-cover"
-                alt="Project">
-            </div>
-          </div>
-
-          <!-- Slide 4 -->
-          <div class="min-w-[80%] sm:min-w-[45%] lg:min-w-[28%] px-3">
-            <div
-              class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-[1.02] transition">
-              <img
-                src="https://feoura.com/wp-content/uploads/2025/11/Untitled-design-18.webp"
-                class="w-full h-[200px] lg:h-[240px] object-cover"
-                alt="Project">
-            </div>
-          </div>
-
-          <!-- Slide 5 -->
-          <div class="min-w-[80%] sm:min-w-[45%] lg:min-w-[28%] px-3">
-            <div
-              class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-[1.02] transition">
-              <img
-                src="https://feoura.com/wp-content/uploads/2025/11/Untitled-design-18.webp"
-                class="w-full h-[200px] lg:h-[240px] object-cover"
-                alt="Project">
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Slider Script -->
-<script>
-  const slider = document.getElementById("slider");
-  const next = document.getElementById("nextSlide");
-  const prev = document.getElementById("prevSlide");
-
-  let index = 0;
-  const slides = slider.children.length;
-
-  function updateSlider() {
-    const slideWidth = slider.children[0].offsetWidth;
-    slider.style.transform = `translateX(-${index * slideWidth}px)`;
-  }
-
-  next.addEventListener("click", () => {
-    index = (index + 1) % slides;
-    updateSlider();
-  });
-
-  prev.addEventListener("click", () => {
-    index = (index - 1 + slides) % slides;
-    updateSlider();
-  });
-
-  window.addEventListener("resize", updateSlider);
-</script>
 
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+     <!-- AI Integration Section -->
+     <section class="bg-blue-900 py-12 lg:py-20 relative overflow-hidden" style="background-image: url('https://feoura.com/wp-content/uploads/2025/10/bd52a612-d975-4906-b5e7-ae8d0fae0af6-e1761252227356.webp'); background-size: contain; background-position: right center; background-repeat: no-repeat;">
+        <!-- Background gradient overlay for text readability -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-800/70 to-indigo-900/80"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <!-- Left Column - Text Content -->
+                <div class="space-y-4 text-white">
+                    <h2 class="text-2xl lg:text-4xl font-small uppercase leading-tight">
+                        AI INTEGRATION – THE FUTURE OF WEB DESIGN
+                    </h2>
+                    <h3 class="text-lg lg:text-xl font-normal uppercase leading-tight text-gray-300">
+                        ENGINEERING INTELLIGENT FEATURES FOR NEXT-GENERATION PERFORMANCE.
+                    </h3>
+                    <div class="space-y-3 text-sm lg:text-base leading-relaxed text-white">
+                        <p>
+                            We stay ahead of the curve by integrating AI-powered solutions into our website design process. From intelligent design layouts to smart automation, we ensure your website delivers a next-level experience that feels both personal and innovative.
+                        </p>
+                        <p>
+                            Our AI integration capabilities transform how your website interacts with visitors, creating dynamic, responsive experiences that adapt to user behavior and preferences in real-time.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Column - 3D Face Graphic (part of background) -->
+                <div class="relative flex justify-center lg:justify-end">
+                    <!-- The 3D face graphic is part of the background image -->
+                    <div class="relative w-full max-w-md h-[400px] lg:h-[450px]"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Let's Design a Website Section -->
+    <section class="bg-white py-16 lg:py-24">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="max-w-6xl">
+                <h2 class="text-4xl lg:text-5xl font-small text-black uppercase leading-tight mb-6">
+                    LET'S DESIGN A WEBSITE THAT WORKS AS<br>HARD AS YOU DO
+                </h2>
+                <div class="space-y-4 text-base lg:text-lg text-black leading-relaxed">
+                    <p>
+                        Get a modern, custom-built website that represents your brand and performs flawlessly across every device.
+                    </p>
+                    <p>
+                        We don't use templates — we build custom website designs tailored to your business needs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Website Design Section -->
+    <section class="bg-white py-12 lg:py-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                <!-- Left Column - Black Background -->
+                <div class="bg-black py-12 lg:py-16 px-6 lg:px-10">
+                    <div class="space-y-4 text-white">
+                        <h2 class="text-2xl lg:text-3xl font-bold uppercase leading-tight">
+                            NEW WEBSITE DESIGN
+                        </h2>
+                        <h3 class="text-lg lg:text-xl font-normal uppercase leading-tight text-gray-300">
+                            LAUNCH YOUR BRAND WITH A STUNNING WEBSITE DESIGN
+                        </h3>
+                        <p class="text-sm lg:text-base leading-relaxed text-white">
+                            A modern, responsive business website design that reflects your vision, engages your audience, and drives results. SEO-optimized, fast-loading, and crafted to convert.
+                        </p>
+                        <button class="bg-white text-black px-6 py-3 rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors inline-flex items-center gap-2 mt-4">
+                            LET'S START YOUR NEW WEBSITE
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Column - Light Beige Background -->
+                <div class="bg-stone-50 py-12 lg:py-16 px-6 lg:px-10">
+                    <div class="space-y-4">
+                        <!-- Header -->
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="text-black font-bold text-sm lg:text-base uppercase">STUDIO SHODWE</span>
+                            <span class="text-black font-bold text-sm lg:text-base uppercase">STUDIO SHODWE</span>
+                        </div>
+
+                        <!-- Main Title -->
+                        <h2 class="text-3xl lg:text-4xl font-bold text-black uppercase leading-tight mb-4">
+                            NEW WEBSITE
+                        </h2>
+
+                        <!-- Decorative Tape Elements -->
+                        <div class="relative mb-4">
+                            <div class="bg-pink-500 transform rotate-[-5deg] px-3 py-1.5 mb-1.5">
+                                <span class="text-white text-xs font-bold uppercase">NEW WEBSITE</span>
+                            </div>
+                            <div class="bg-pink-500 transform rotate-[3deg] px-3 py-1.5 mb-1.5">
+                                <span class="text-white text-xs font-bold uppercase">NEW WEBSITE</span>
+                            </div>
+                            <div class="bg-pink-500 transform rotate-[-2deg] px-3 py-1.5">
+                                <span class="text-white text-xs font-bold uppercase">NEW WEBSITE</span>
+                            </div>
+                        </div>
+
+                        <!-- URL -->
+                        <p class="text-black font-medium text-xs uppercase mb-4">
+                            WWW.REALLYGREATSITE.COM
+                        </p>
+
+                        <!-- Laptop Graphic -->
+                        <div class="relative mb-4">
+                            <div class="bg-gray-800 rounded-lg p-2 shadow-2xl">
+                                <div class="bg-white rounded overflow-hidden">
+                                    <img 
+                                        src="https://feoura.com/wp-content/uploads/2025/10/bd52a612-d975-4906-b5e7-ae8d0fae0af6-e1761252227356.webp" 
+                                        alt="Website Preview" 
+                                        class="w-full h-[200px] lg:h-[250px] object-cover"
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Descriptive Paragraph -->
+                        <p class="text-sm text-black leading-relaxed mb-4">
+                            Explore our latest updates, browse through our offerings, and stay connected with everything we have in store. Visit us now and be part of this exciting journey!
+                        </p>
+
+                        <!-- Bottom Footer -->
+                        <div class="flex justify-between items-center pt-4 border-t border-gray-300">
+                            <span class="text-black font-bold text-xs uppercase">STUDIO SHODWE</span>
+                            <div class="flex gap-2">
+                                <button class="bg-white text-black px-3 py-1.5 rounded text-xs font-medium hover:bg-gray-50 transition-colors">
+                                    VISIT NOW
+                                </button>
+                                <button class="bg-white text-black px-3 py-1.5 rounded text-xs font-medium hover:bg-gray-50 transition-colors">
+                                    Contact us
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slider Script -->
+    <script>
+        const slider = document.getElementById("slider");
+        const next = document.getElementById("nextSlide");
+        const prev = document.getElementById("prevSlide");
+
+        let index = 0;
+        const slides = slider.children.length;
+
+        function updateSlider() {
+            const slideWidth = slider.children[0].offsetWidth;
+            slider.style.transform = `translateX(-${index * slideWidth}px)`;
+        }
+
+        next.addEventListener("click", () => {
+            index = (index + 1) % slides;
+            updateSlider();
+        });
+
+        prev.addEventListener("click", () => {
+            index = (index - 1 + slides) % slides;
+            updateSlider();
+        });
+
+        window.addEventListener("resize", updateSlider);
+    </script>
 
     <!-- Chat Widget -->
     <div id="chatWidget" class="fixed bottom-32 right-6 z-50 w-80 bg-white rounded-t-2xl rounded-b-lg shadow-2xl hidden opacity-0 transform translate-y-4 transition-all duration-300 ease-out">

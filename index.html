@@ -16,7 +16,7 @@
                 <span class="text-black text-xl font-normal lowercase tracking-tight">eoura</span>
             </div>
 
-            <!-- Navigation Menu -->
+            <!-- Desktop Navigation Menu -->
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#" class="text-black hover:text-gray-700 text-sm font-medium">Home</a>
                 <a href="#" class="text-black hover:text-gray-700 text-sm font-medium">Website Design</a>
@@ -39,11 +39,47 @@
                 <a href="#" class="text-black hover:text-gray-700 text-sm font-medium">Contact Us</a>
             </div>
 
-            <!-- START NOW Button -->
-            <button class="bg-black text-white px-6 py-2.5 text-sm font-medium hover:bg-gray-800 transition-colors">
-                START NOW
+            <!-- Desktop START NOW Button -->
+            <div class="hidden md:block">
+                <button class="bg-black text-white px-6 py-2.5 text-sm font-medium hover:bg-gray-800 transition-colors">
+                    START NOW
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuButton" class="md:hidden p-2 text-black hover:text-gray-700 transition-colors">
+                <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
             </button>
         </nav>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-6 py-4 space-y-4">
+                <a href="#" class="block text-black hover:text-gray-700 text-sm font-medium py-2">Home</a>
+                <a href="#" class="block text-black hover:text-gray-700 text-sm font-medium py-2">Website Design</a>
+                <a href="#" class="flex items-center justify-between text-black hover:text-gray-700 text-sm font-medium py-2">
+                    Company
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </a>
+                <a href="#" class="flex items-center justify-between text-black hover:text-gray-700 text-sm font-medium py-2">
+                    Sectors
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </a>
+                <a href="#" class="block text-black hover:text-gray-700 text-sm font-medium py-2">Contact Us</a>
+                <button class="w-full bg-black text-white px-6 py-2.5 text-sm font-medium hover:bg-gray-800 transition-colors mt-4">
+                    START NOW
+                </button>
+            </div>
+        </div>
     </header>
 
     <!-- Hero Section -->
@@ -1225,4 +1261,3 @@
     <script type="module" src="/src/main.js"></script>
 </body>
 </html>
-ecr

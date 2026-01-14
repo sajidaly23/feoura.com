@@ -11,15 +11,15 @@
     <header class=" top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
         <nav class="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between">
             <!-- Logo -->
-            <div class="flex items-center">
+            <a href="#" class="nav-link flex items-center" data-page="home">
                 <img src="https://feoura.com/wp-content/uploads/2025/10/Sample-2.png" alt="Feoura Logo" class="h-10 mr-2">
                 <span class="text-black text-xl font-normal lowercase tracking-tight">eoura</span>
-            </div>
+            </a>
 
             <!-- Desktop Navigation Menu -->
             <div class="hidden md:flex items-center space-x-8">
-                <a href="#" class="text-black hover:text-gray-700 text-sm font-medium">Home</a>
-                <a href="#" class="text-black hover:text-gray-700 text-sm font-medium">Website Design</a>
+                <a href="#" class="nav-link text-black hover:text-gray-700 text-sm font-medium" data-page="home">Home</a>
+                <a href="#" class="nav-link text-black hover:text-gray-700 text-sm font-medium" data-page="website-design">Website Design</a>
                 <div class="relative group">
                     <a href="#" class="text-black hover:text-gray-700 text-sm font-medium flex items-center">
                         Company
@@ -27,6 +27,49 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </a>
+                    <!-- Company Dropdown Menu -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 top-full mt-4 w-[800px] bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-6">
+                        <div class="grid grid-cols-3 gap-6">
+                            <!-- About Us Card -->
+                            <div class="group/item cursor-pointer">
+                                <div class="relative h-48 rounded-xl overflow-hidden mb-4">
+                                    <img 
+                                        src="https://feoura.com/wp-content/uploads/2025/10/Demo-4-768x960.jpg" 
+                                        alt="About Us" 
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-300"
+                                    >
+                                </div>
+                                <h3 class="text-lg font-bold text-black mb-1">About Us</h3>
+                                <p class="text-sm text-gray-600">Know all about Our Company</p>
+                            </div>
+
+                            <!-- Case Studies Card -->
+                            <div class="group/item cursor-pointer">
+                                <div class="relative h-48 rounded-xl overflow-hidden mb-4">
+                                    <img 
+                                        src="https://feoura.com/wp-content/uploads/2025/10/Demo-16.jpg" 
+                                        alt="Case Studies" 
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-300"
+                                    >
+                                </div>
+                                <h3 class="text-lg font-bold text-black mb-1">Case Studies</h3>
+                                <p class="text-sm text-gray-600">View Our Client case studies</p>
+                            </div>
+
+                            <!-- Careers Card -->
+                            <div class="group/item cursor-pointer">
+                                <div class="relative h-48 rounded-xl overflow-hidden mb-4">
+                                    <img 
+                                        src="https://feoura.com/wp-content/uploads/2025/10/Demo-17.jpg" 
+                                        alt="Careers" 
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-300"
+                                    >
+                                </div>
+                                <h3 class="text-lg font-bold text-black mb-1">Careers</h3>
+                                <p class="text-sm text-gray-600">Get Opportunity to work with Us</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="relative group">
                     <a href="#" class="text-black hover:text-gray-700 text-sm font-medium flex items-center">
@@ -35,8 +78,66 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </a>
+                    <!-- Sectors Dropdown Menu -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 top-full mt-4 w-[900px] bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-6">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <!-- Healthcare Web Design -->
+                            <div class="group/item cursor-pointer">
+                                <div class="relative h-48 rounded-xl overflow-hidden mb-4 bg-gray-100">
+                                    <img
+                                        src="https://feoura.com/wp-content/uploads/2025/10/Demo-17.jpg"
+                                        alt="Healthcare Web design"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-300"
+                                    >
+                                </div>
+                                <h3 class="text-lg font-bold text-black mb-1">Healthcare Web design</h3>
+                                <p class="text-sm text-gray-600">Specialized medical and healthcare websites.</p>
+                            </div>
+
+                            <!-- Consultation Web Design -->
+                            <div class="group/item cursor-pointer">
+                                <div class="relative h-48 rounded-xl overflow-hidden mb-4 bg-gray-100">
+                                    <img
+                                        src="https://feoura.com/wp-content/uploads/2025/10/Demo-4-768x960.jpg"
+                                        alt="Consultation Web design"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-300"
+                                    >
+                                </div>
+                                <h3 class="text-lg font-bold text-black mb-1">Consultation Web design</h3>
+                                <p class="text-sm text-gray-600">Websites tailored for consultants & coaches.</p>
+                            </div>
+
+                            <!-- Beauty Web Design -->
+                            <div class="group/item cursor-pointer">
+                                <div class="relative h-48 rounded-xl overflow-hidden mb-4 bg-gray-100">
+                                    <img
+                                        src="https://feoura.com/wp-content/uploads/2025/10/Demo-16.jpg"
+                                        alt="Beauty Web Design"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-300"
+                                    >
+                                </div>
+                                <h3 class="text-lg font-bold text-black mb-1">Beauty Web Design</h3>
+                                <p class="text-sm text-gray-600">Elegant designs for salons & beauty brands.</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                            <!-- Construction Web design -->
+                            <div class="group/item cursor-pointer md:col-span-3">
+                                <div class="relative h-52 rounded-xl overflow-hidden mb-4 bg-gray-100">
+                                    <img
+                                        src="https://feoura.com/wp-content/uploads/2025/10/Demo-4-768x960.jpg"
+                                        alt="Construction Web design"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-300"
+                                    >
+                                </div>
+                                <h3 class="text-lg font-bold text-black mb-1">Construction Web design</h3>
+                                <p class="text-sm text-gray-600">High-impact websites for construction and real estate businesses.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <a href="#" class="text-black hover:text-gray-700 text-sm font-medium">Contact Us</a>
+                <a href="#contact-section" class="text-black hover:text-gray-700 text-sm font-medium">Contact Us</a>
             </div>
 
             <!-- Desktop START NOW Button -->
@@ -60,8 +161,8 @@
         <!-- Mobile Navigation Menu -->
         <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-gray-100">
             <div class="max-w-7xl mx-auto px-6 py-4 space-y-4">
-                <a href="#" class="block text-black hover:text-gray-700 text-sm font-medium py-2">Home</a>
-                <a href="#" class="block text-black hover:text-gray-700 text-sm font-medium py-2">Website Design</a>
+                <a href="#" class="nav-link block text-black hover:text-gray-700 text-sm font-medium py-2" data-page="home">Home</a>
+                <a href="#" class="nav-link block text-black hover:text-gray-700 text-sm font-medium py-2" data-page="website-design">Website Design</a>
                 <a href="#" class="flex items-center justify-between text-black hover:text-gray-700 text-sm font-medium py-2">
                     Company
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -74,7 +175,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
                 </a>
-                <a href="#" class="block text-black hover:text-gray-700 text-sm font-medium py-2">Contact Us</a>
+                <a href="#contact-section" class="block text-black hover:text-gray-700 text-sm font-medium py-2">Contact Us</a>
                 <button class="w-full bg-black text-white px-6 py-2.5 text-sm font-medium hover:bg-gray-800 transition-colors mt-4">
                     START NOW
                 </button>
@@ -82,8 +183,242 @@
         </div>
     </header>
 
+    <!-- Website Design Page Section -->
+    <section id="website-design-page" class="pt-20 min-h-screen relative overflow-hidden bg-blue-50 hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32 space-y-16">
+            <!-- Top Hero: Website Design Intro + Right Graphics -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+                <!-- Left Column - Text Content -->
+                <div class="space-y-6">
+                    <h1 class="text-5xl lg:text-6xl font-bold text-black uppercase leading-tight tracking-tight">
+                        WEBSITE DESIGN
+                    </h1>
+                    <h2 class="text-2xl lg:text-3xl font-normal text-black leading-tight">
+                        WHERE CREATIVITY MEETS STRATEGY TO BUILD WEBSITES THAT CONVERT
+                    </h2>
+                    <div class="space-y-4 text-base lg:text-lg text-black leading-relaxed">
+                        <p>
+                            Your website is more than a digital presence — it's your brand's first impression. At Feoura, we specialize in custom website design services that blend creativity, performance, and functionality.
+                        </p>
+                        <p>
+                            We design user-focused, SEO-optimized websites that attract, engage, and convert — helping your business grow in the USA, UK, and across global markets.
+                        </p>
+                    </div>
+                    <button class="bg-black text-white px-8 py-4 rounded-lg text-base font-medium hover:bg-gray-800 transition-colors inline-flex items-center gap-2 mt-6">
+                        GET A FREE WEBSITE DESIGN CONSULTATION
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Right Column - Promotional Graphics Grid -->
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Graphic 1: Need a Website -->
+                    <div class="bg-blue-500 rounded-lg p-6 text-white shadow-lg">
+                        <h3 class="text-lg font-bold mb-4">Need a Website? Let's Build Your Online Presence!</h3>
+                        <div class="mb-4">
+                            <img src="https://feoura.com/wp-content/uploads/2025/10/Demo-4-768x960.jpg" alt="Team working" class="w-full h-32 object-cover rounded mb-4">
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-white/20 px-3 py-1 rounded-full text-xs font-medium">Fast &amp; Secure</span>
+                            <span class="bg-white/20 px-3 py-1 rounded-full text-xs font-medium">SEO Optimized</span>
+                            <span class="bg-white/20 px-3 py-1 rounded-full text-xs font-medium">Mobile-Friendly</span>
+                        </div>
+                        <p class="text-xs text-white/80">www.feoura.com</p>
+                    </div>
+
+                    <!-- Graphic 2: Personal Branding -->
+                    <div class="bg-yellow-400 rounded-lg p-6 text-black shadow-lg">
+                        <h3 class="text-lg font-bold mb-4">SPECIAL FOR YOU PERSONAL BRANDING</h3>
+                        <div class="mb-4">
+                            <img src="https://feoura.com/wp-content/uploads/2025/10/Demo-16.jpg" alt="Food collage" class="w-full h-32 object-cover rounded mb-4">
+                        </div>
+                        <button class="bg-black text-white px-4 py-2 rounded text-sm font-medium hover:bg-gray-800 transition-colors w-full mb-2">
+                            ORDER NOW
+                        </button>
+                        <p class="text-xs text-black/70">www.feoura.com</p>
+                    </div>
+
+                    <!-- Graphic 3: SEO Strategist -->
+                    <div class="bg-purple-600 rounded-lg p-6 text-white shadow-lg">
+                        <h3 class="text-lg font-bold mb-4">SEO STRATEGIST</h3>
+                        <div class="mb-4">
+                            <img src="https://feoura.com/wp-content/uploads/2025/10/Demo-17.jpg" alt="SEO Expert" class="w-full h-32 object-cover rounded mb-4">
+                        </div>
+                        <div class="space-y-2 text-xs">
+                            <p>• SOCIAL MEDIA MARKETING</p>
+                            <p>• BUSINESS MANAGEMENT</p>
+                            <p>• SEARCH ENGINE OPTIMIZATION</p>
+                            <p>• BRAND STRATEGY</p>
+                            <p class="font-bold mt-2">LET'S WORK TOGETHER</p>
+                        </div>
+                    </div>
+
+                    <!-- Graphic 4: Transform Your Brand -->
+                    <div class="bg-gray-800 rounded-lg p-6 text-white shadow-lg">
+                        <h3 class="text-lg font-bold mb-4">TRANSFORM YOUR BRAND</h3>
+                        <p class="text-xs mb-4">FROM CRAFTING YOUR VISION TO DELIVERING IMPACTFUL RESULTS, WE'RE HERE TO HELP</p>
+                        <div class="grid grid-cols-3 gap-2 mb-4">
+                            <div class="text-center">
+                                <img src="https://feoura.com/wp-content/uploads/2025/10/Demo-4-768x960.jpg" alt="Brand Strategy" class="w-full h-16 object-cover rounded mb-1">
+                                <p class="text-xs">BRAND STRATEGY</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="https://feoura.com/wp-content/uploads/2025/10/Demo-16.jpg" alt="Web Development" class="w-full h-16 object-cover rounded mb-1">
+                                <p class="text-xs">WEB DEVELOPMENT</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="https://feoura.com/wp-content/uploads/2025/10/Demo-17.jpg" alt="Social Media" class="w-full h-16 object-cover rounded mb-1">
+                                <p class="text-xs">SOCIAL MEDIA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Black Gradient Section: Comprehensive Website Design Services -->
+            <section class="rounded-3xl bg-gradient-to-r from-black via-gray-900 to-slate-900 px-6 lg:px-10 py-12 lg:py-16 text-white shadow-2xl">
+                <div class="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start lg:items-center">
+                    <!-- Text Content -->
+                    <div class="flex-1 space-y-6">
+                        <h2 class="text-sm lg:text-base tracking-[0.25em] uppercase text-blue-200">
+                            Feoura
+                        </h2>
+                        <h3 class="text-3xl lg:text-4xl font-bold leading-tight">
+                            COMPREHENSIVE WEBSITE DESIGN SERVICES TAILORED TO YOUR BUSINESS
+                        </h3>
+                        <p class="text-sm lg:text-base text-gray-100 leading-relaxed max-w-2xl">
+                            At <span class="font-semibold">Feoura</span>, we offer complete end-to-end website design solutions built to help your business grow online.
+                            Our services cover every aspect of design and development — from branding and user experience to SEO and performance optimization.
+                            Whether you need a sleek corporate site, an eCommerce platform, or a creative portfolio, our expert team delivers
+                            results that combine beauty, function, and measurable impact.
+                        </p>
+                        <button class="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-full text-sm lg:text-base font-medium hover:bg-gray-100 transition-colors">
+                            START YOUR PROJECT
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Horizontal Gallery -->
+                    <div class="flex-1 w-full">
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <!-- Card 1 -->
+                            <div class="bg-white/5 rounded-2xl overflow-hidden border border-white/10 backdrop-blur">
+                                <img src="https://feoura.com/wp-content/uploads/2025/10/Demo-4-768x960.jpg" alt="WordPress Website Design" class="w-full h-32 sm:h-40 object-cover">
+                                <div class="px-4 py-3">
+                                    <p class="text-xs uppercase tracking-wide text-blue-200 mb-1">WordPress</p>
+                                    <p class="text-sm font-medium">High-impact business websites</p>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="bg-white/5 rounded-2xl overflow-hidden border border-white/10 backdrop-blur">
+                                <img src="https://feoura.com/wp-content/uploads/2025/10/Demo-17.jpg" alt="WooCommerce Development" class="w-full h-32 sm:h-40 object-cover">
+                                <div class="px-4 py-3">
+                                    <p class="text-xs uppercase tracking-wide text-blue-200 mb-1">WooCommerce</p>
+                                    <p class="text-sm font-medium">Conversion-focused online stores</p>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="bg-white/5 rounded-2xl overflow-hidden border border-white/10 backdrop-blur hidden sm:block">
+                                <img src="https://feoura.com/wp-content/uploads/2025/10/Demo-16.jpg" alt="Showcase Website Design" class="w-full h-32 sm:h-40 object-cover">
+                                <div class="px-4 py-3">
+                                    <p class="text-xs uppercase tracking-wide text-blue-200 mb-1">Showcase</p>
+                                    <p class="text-sm font-medium">Portfolio &amp; brand storytelling</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Our Process Section -->
+            <section class="bg-gray-50 rounded-3xl px-6 lg:px-12 py-16 lg:py-20">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                    <!-- Left Column: Text -->
+                    <div class="space-y-6">
+                        <h2 class="text-4xl lg:text-5xl font-bold text-black uppercase tracking-tight">
+                            OUR PROCESS
+                        </h2>
+                        <div class="space-y-3">
+                            <h3 class="text-2xl lg:text-3xl font-bold text-black uppercase">
+                                1. DEFINE YOUR STRATEGY
+                            </h3>
+                            <p class="text-lg lg:text-xl font-medium text-black uppercase tracking-wide">
+                                UNDERSTANDING YOUR VISION &amp; BUSINESS GOALS
+                            </p>
+                        </div>
+
+                        <p class="text-base lg:text-lg text-black leading-relaxed">
+                            We begin by discovering your brand identity, target market, and business objectives. Our strategy sessions align your website design with measurable goals — ensuring your digital presence supports growth and conversions from day one.
+                        </p>
+
+                        <!-- Blue Icon -->
+                        <div class="pt-4">
+                            <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Strategy Graphic -->
+                    <div class="flex justify-center lg:justify-end">
+                        <div class="relative w-full max-w-lg h-96 rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-purple-600 via-purple-700 to-purple-800 p-8">
+                            <!-- Top Text -->
+                            <div class="text-white mb-6">
+                                <p class="text-xs uppercase tracking-wider text-purple-200 mb-2">OUR FIRST PART OF PROCESS</p>
+                                <h3 class="text-3xl lg:text-4xl font-bold uppercase">BUILDING STRATEGY</h3>
+                            </div>
+
+                            <!-- Decorative Elements -->
+                            <div class="absolute bottom-8 right-8 flex items-end gap-3">
+                                <!-- Bar Graph Columns -->
+                                <div class="flex items-end gap-2">
+                                    <div class="w-8 h-16 bg-yellow-400 rounded-t"></div>
+                                    <div class="w-8 h-24 bg-yellow-400 rounded-t"></div>
+                                    <div class="w-8 h-32 bg-yellow-400 rounded-t"></div>
+                                </div>
+                                
+                                <!-- Target/Bullseye -->
+                                <div class="relative ml-4">
+                                    <div class="w-20 h-20 rounded-full border-4 border-red-500"></div>
+                                    <div class="absolute inset-2 w-16 h-16 rounded-full border-4 border-pink-400"></div>
+                                    <div class="absolute inset-4 w-12 h-12 rounded-full border-4 border-blue-400"></div>
+                                    <div class="absolute inset-6 w-8 h-8 rounded-full bg-yellow-400"></div>
+                                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-yellow-600 rounded-full"></div>
+                                </div>
+                            </div>
+
+                            <!-- Arrow -->
+                            <div class="absolute bottom-20 right-24">
+                                <svg class="w-16 h-16 text-blue-300 transform rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                </svg>
+                            </div>
+
+                            <!-- Decorative X marks and shapes -->
+                            <div class="absolute top-4 right-4 w-6 h-6 text-pink-300 opacity-50">
+                                <svg fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                </svg>
+                            </div>
+                            <div class="absolute bottom-4 left-4 w-8 h-8 bg-pink-300 rounded-full opacity-30"></div>
+                            <div class="absolute top-1/2 left-4 w-6 h-6 bg-pink-200 rounded-full opacity-40"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
     <!-- Hero Section -->
-    <main class="pt-20 min-h-screen relative overflow-hidden bg-blue-50">
+    <main id="home-page" class="pt-20 min-h-screen relative overflow-hidden bg-blue-50">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
             <div class="max-w-4xl mx-auto text-center relative z-10">
                 <!-- Headline -->
@@ -111,7 +446,7 @@
     </main>
 
     <!-- Partners/Logos Section -->
-    <section class="bg-black py-8">
+    <section id="partners-section" class="bg-black py-8">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex items-center justify-center flex-wrap gap-8 lg:gap-12">
                 <span class="text-white text-sm font-medium opacity-80">PayPal</span>
@@ -893,6 +1228,97 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact-section" class="bg-gradient-to-b from-gray-100 via-gray-50 to-white py-20 lg:py-28">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <!-- Top Row: Heading + Copy -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start mb-16">
+                <div>
+                    <h2 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-black leading-tight tracking-tight">
+                        Let’s Build Something<br class="hidden sm:block" />
+                        Extraordinary Together
+                    </h2>
+                </div>
+                <div class="text-base lg:text-lg text-black leading-relaxed max-w-xl">
+                    <p class="mb-4">
+                        Your next big digital success starts with a conversation. Whether you’re launching a new business
+                        website, redesigning an outdated one, or exploring ways to grow your online presence — our team is
+                        here to listen, plan, and deliver results.
+                    </p>
+                    <p>
+                        We create websites that don’t just look good but work hard for your business.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contact Form Card -->
+            <div class="flex justify-center">
+                <div class="w-full max-w-xl bg-[#e5edf7] rounded-3xl shadow-xl px-6 sm:px-10 py-10">
+                    <h3 class="text-center text-xl sm:text-2xl font-semibold text-black tracking-wide mb-6 uppercase">
+                        START THE CONVERSATION —<br />
+                        GET IN TOUCH DIRECTLY
+                    </h3>
+
+                    <form action="#" method="post" class="space-y-4">
+                        <div>
+                            <label for="contact-name" class="sr-only">Name</label>
+                            <input
+                                id="contact-name"
+                                type="text"
+                                placeholder="Name"
+                                class="w-full px-4 py-2.5 rounded-md border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-black focus:border-black bg-white"
+                            />
+                        </div>
+                        <div>
+                            <label for="contact-email" class="sr-only">Email</label>
+                            <input
+                                id="contact-email"
+                                type="email"
+                                placeholder="Email"
+                                class="w-full px-4 py-2.5 rounded-md border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-black focus:border-black bg-white"
+                            />
+                        </div>
+                        <div>
+                            <label for="contact-phone" class="sr-only">Phone</label>
+                            <input
+                                id="contact-phone"
+                                type="tel"
+                                placeholder="Phone"
+                                class="w-full px-4 py-2.5 rounded-md border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-black focus:border-black bg-white"
+                            />
+                        </div>
+                        <div>
+                            <label for="contact-website" class="sr-only">Website (optional)</label>
+                            <input
+                                id="contact-website"
+                                type="text"
+                                placeholder="Website (optional)"
+                                class="w-full px-4 py-2.5 rounded-md border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-black focus:border-black bg-white"
+                            />
+                        </div>
+                        <div>
+                            <label for="contact-message" class="sr-only">Project Details</label>
+                            <textarea
+                                id="contact-message"
+                                rows="4"
+                                placeholder="Project details / message"
+                                class="w-full px-4 py-2.5 rounded-md border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-black focus:border-black bg-white resize-none"
+                            ></textarea>
+                        </div>
+                        <div class="pt-2">
+                            <button
+                                type="submit"
+                                class="w-full bg-black text-white text-sm font-medium py-2.5 rounded-md hover:bg-gray-800 transition-colors"
+                            >
+                                Send
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Feoura FAQs Section -->
     <section class="bg-white py-16 lg:py-24">
         <div class="max-w-4xl mx-auto px-6 lg:px-8">
@@ -1145,7 +1571,7 @@
                                 <a href="#" class="text-white hover:text-gray-300 text-sm lg:text-base transition-colors">Web Design</a>
                             </li>
                             <li>
-                                <a href="#" class="text-white hover:text-gray-300 text-sm lg:text-base transition-colors">Contact</a>
+                                <a href="#contact-section" class="text-white hover:text-gray-300 text-sm lg:text-base transition-colors">Contact</a>
                             </li>
                         </ul>
                     </div>

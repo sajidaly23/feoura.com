@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        'feoura-blue': '#3B82F6',
-        'feoura-purple': '#8B5CF6',
+        'horizon-blue': '#3B82F6',
+        'horizon-purple': '#8B5CF6',
       },
     },
   },

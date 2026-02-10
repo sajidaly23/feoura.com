@@ -10,7 +10,7 @@ const closeIcon = document.getElementById('closeIcon');
 if (mobileMenuButton && mobileMenu) {
     mobileMenuButton.addEventListener('click', () => {
         const isHidden = mobileMenu.classList.contains('hidden');
-        
+
         if (isHidden) {
             mobileMenu.classList.remove('hidden');
             menuIcon.classList.add('hidden');
@@ -56,81 +56,134 @@ function closeChatWidget() {
     }, 300);
 }
 
-// Slider Functionality - Continuous Right to Left Scroll
+// Slider Functionality - Infinite Loop
 const slider = document.getElementById('slider');
 const prevButton = document.getElementById('prevSlide');
 const nextButton = document.getElementById('nextSlide');
 
 if (slider && prevButton && nextButton) {
-    let currentSlide = 0;
-    const slides = slider.children;
-    const totalSlides = slides.length;
-    let slideWidth = 0;
-    
-    // Calculate slide width based on viewport
-    function calculateSlideWidth() {
-        if (window.innerWidth >= 1024) {
-            slideWidth = 20; // 20% on desktop (shows 5 images)
+    const originalSlides = Array.from(slider.children);
+    const totalOriginalSlides = originalSlides.length;
+
+    // We need to clone slides to create the illusion of infinite scrolling.
+    // Cloning all slides is usually safest for small numbers of slides.
+    originalSlides.forEach(slide => {
+        const clone = slide.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true'); // Accessibility
+        slider.appendChild(clone);
+    });
+
+    let currentIndex = 0;
+    let isTransitioning = false;
+
+    // Get gap from CSS
+    const getGap = () => {
+        const style = window.getComputedStyle(slider);
+        const gap = parseFloat(style.gap) || 0;
+        return gap;
+    };
+
+    const updateSliderPosition = (withTransition = true) => {
+        if (!slider.children.length) return;
+
+        const firstSlide = slider.children[0];
+        const slideWidth = firstSlide.offsetWidth;
+        const gap = getGap();
+        const moveAmount = (slideWidth + gap) * currentIndex;
+
+        if (!withTransition) {
+            slider.style.transition = 'none';
         } else {
-            slideWidth = 50; // 50% on mobile (shows 2 images)
+            slider.style.transition = 'transform 0.5s ease-in-out';
         }
-    }
-    
-    calculateSlideWidth();
-    window.addEventListener('resize', calculateSlideWidth);
 
-    // Function to update slider position
-    function updateSlider() {
-        slider.style.transform = `translateX(-${currentSlide * slideWidth}%)`;
-    }
+        slider.style.transform = `translateX(-${moveAmount}px)`;
 
-    // Auto-scroll from right to left
-    function autoScroll() {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        updateSlider();
-        
-        // Reset to beginning for infinite loop
-        if (currentSlide === 0) {
-            setTimeout(() => {
-                slider.style.transition = 'none';
-                slider.style.transform = 'translateX(0)';
-                setTimeout(() => {
-                    slider.style.transition = 'transform 1000ms ease-in-out';
-                }, 50);
-            }, 1000);
+        // Reflow to ensure transition removal takes effect immediately if needed
+        if (!withTransition) slider.offsetHeight;
+    };
+
+    const handleTransitionEnd = () => {
+        isTransitioning = false;
+
+        // Forward loop: If we've scrolled past the original set (pointing to clones)
+        if (currentIndex >= totalOriginalSlides) {
+            currentIndex = currentIndex % totalOriginalSlides;
+            updateSliderPosition(false);
         }
-    }
+    };
 
-    // Start auto-scroll (every 4 seconds)
-    let autoScrollInterval = setInterval(autoScroll, 4000);
+    slider.addEventListener('transitionend', handleTransitionEnd);
 
-    // Manual navigation
+    const nextSlide = () => {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        currentIndex++;
+        updateSliderPosition(true);
+    };
+
+    const prevSlide = () => {
+        if (isTransitioning) return;
+        isTransitioning = true;
+
+        if (currentIndex === 0) {
+            // Jump to the end of the cloned set (which matches the start visually)
+            // Actually, we want to jump to the 'clone' matching the last original slide?
+            // No, if we are at 0 (Original 1), 'backward' should be 'Original Last'.
+            // In our cloning setup: [1, 2, 1', 2']
+            // 0 is 1. Back from 0 should go to 2' (index 3) ??? No, visual continuity.
+            // Behave as if we are at 1' (index 2).
+            // Jump to 2 (1').
+            // Then animate to 1 (2).
+
+            currentIndex = totalOriginalSlides;
+            updateSliderPosition(false);
+
+            // Force reflow/next frame to allow jump to happen before animation
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    currentIndex--;
+                    updateSliderPosition(true);
+                });
+            });
+        } else {
+            currentIndex--;
+            updateSliderPosition(true);
+        }
+    };
+
     nextButton.addEventListener('click', () => {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        updateSlider();
-        // Reset auto-scroll timer
-        clearInterval(autoScrollInterval);
-        autoScrollInterval = setInterval(autoScroll, 4000);
+        nextSlide();
+        resetAutoScroll();
     });
 
     prevButton.addEventListener('click', () => {
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        updateSlider();
-        // Reset auto-scroll timer
-        clearInterval(autoScrollInterval);
-        autoScrollInterval = setInterval(autoScroll, 4000);
+        prevSlide();
+        resetAutoScroll();
     });
 
+    // Auto Scroll
+    let autoScrollInterval;
+
+    const startAutoScroll = () => {
+        autoScrollInterval = setInterval(nextSlide, 3000);
+    };
+
+    const resetAutoScroll = () => {
+        clearInterval(autoScrollInterval);
+        startAutoScroll();
+    };
+
+    startAutoScroll();
+
     // Pause on hover
-    const sliderContainer = slider.closest('.overflow-hidden');
-    if (sliderContainer) {
-        sliderContainer.addEventListener('mouseenter', () => {
-            clearInterval(autoScrollInterval);
-        });
-        sliderContainer.addEventListener('mouseleave', () => {
-            autoScrollInterval = setInterval(autoScroll, 4000);
-        });
-    }
+    slider.parentElement.addEventListener('mouseenter', () => clearInterval(autoScrollInterval));
+    slider.parentElement.addEventListener('mouseleave', startAutoScroll);
+
+    // Handle Resize
+    window.addEventListener('resize', () => {
+        updateSliderPosition(false);
+    });
 }
 
 // Navigation Functionality
@@ -144,18 +197,18 @@ function showPage(pageName) {
     // Hide all pages
     if (homePage) homePage.classList.add('hidden');
     if (websiteDesignPage) websiteDesignPage.classList.add('hidden');
-    
+
     // Hide all other sections when showing a specific page (except footer and chat widget)
     allSections.forEach(section => {
         const sectionId = section.id || '';
         const isFooter = section.closest('footer') !== null;
         const isChatWidget = sectionId.includes('chat');
-        
+
         if (sectionId !== 'website-design-page' && !isFooter && !isChatWidget) {
             section.classList.add('hidden');
         }
     });
-    
+
     // Show the requested page
     if (pageName === 'home') {
         if (homePage) homePage.classList.remove('hidden');
@@ -169,14 +222,14 @@ function showPage(pageName) {
     } else if (pageName === 'website-design') {
         if (websiteDesignPage) websiteDesignPage.classList.remove('hidden');
     }
-    
+
     // Close mobile menu if open
     if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
         mobileMenu.classList.add('hidden');
         if (menuIcon) menuIcon.classList.remove('hidden');
         if (closeIcon) closeIcon.classList.add('hidden');
     }
-    
+
     // Scroll to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
